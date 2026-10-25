@@ -25,26 +25,14 @@ Explanation of pinned blobs
 -------------------
 NOTE: All arch specific blobs not specifically explained here are pinned for the sake of being able to extract independently of the architecture of the source device.
 
-AndroidMigratePrebuilt.apk
-- This is from a marlin factory image to avoid crashes with the one found in the walleye factory images.
-
 GoogleCalendarSyncAdapter.apk
 - This is no longer included in Google system images and is required for syncing Google Calendar accounts with AOSP Calendar.
-
-PrebuiltExchange3Google.apk
-- This is no longer included in Google system images and is required for using Exchange accounts in the Gmail app.
 
 PrebuiltGmsCore.apk
 - This is a nodpi apk so that it works properly on all devices and updates to the appropriate one. This is generally from APKMirror and is not usually updated between major version updates.
 
-SetupWizard.apk
-- This is a non-pixel SetupWizard for better UX and less pixel-specific references.
-
 default-permissions.xml and privapp-permissions-google.xml
 - These do not always contain all the necessary permissions for apks which are not from the corresponding factory image, so they must be modified to avoid permission related crashes.
-
-libjni_latinimegoogle.so
-- This lib is no longer included in Google system images and is required for swype typing with AOSP LatinIME.
 
 Thanks and Credits
 -------------------
