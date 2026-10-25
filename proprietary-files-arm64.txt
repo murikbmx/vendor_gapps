@@ -1,2 +1,3 @@
 product/apex/com.google.android.gmssystem.prodvic.apex;APPS=PrebuiltGmsCoreVic
+product/app/GboardWu/GboardWu.apk;PRESIGNED
 product/priv-app/Phonesky/Phonesky.apk;PRESIGNED

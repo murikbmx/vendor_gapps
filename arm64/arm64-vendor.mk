@@ -5,6 +5,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 PRODUCT_PACKAGES += \
+    GboardWu \
     Phonesky \
     com.google.android.gmssystem.prodvic
 
