@@ -20,6 +20,7 @@ Build inline with Android
 -------------------
 1. Sync this repo to `$GAPPS_PATH` where `$GAPPS_PATH` is the path to this repo
 2. Include `$GAPPS_PATH/$ARCH/$ARCH-vendor.mk` where `$ARCH` is arm, or arm64 depending on the device's architecture
+3. Optionally set `TARGET_INCLUDE_GBOARD := true` (arm64 only) to include GboardWu, which replaces the AOSP keyboard (LatinIME)
 
 Explanation of pinned blobs
 -------------------

@@ -289,8 +289,15 @@ def generate(targets: list[GappsTarget]) -> None:
         packages_tangorpro = parse_proprietary_files(
             target.name, f"proprietary-files-{target.name}-tangorpro.txt"
         )
+        packages_gboard = parse_proprietary_files(
+            target.name, f"proprietary-files-{target.name}-gboard.txt"
+        )
         packages_all = sorted(
-            packages + packages_mtg + packages_nongrouper + packages_tangorpro,
+            packages
+            + packages_mtg
+            + packages_nongrouper
+            + packages_tangorpro
+            + packages_gboard,
             key=lambda x: (x.soong_module, x.name),
         )
 
@@ -340,6 +347,12 @@ def generate(targets: list[GappsTarget]) -> None:
                 f.write("\n")
                 f.write("ifneq ($(filter %tangorpro,$(TARGET_PRODUCT)),)\n")
                 write_list("PRODUCT_PACKAGES", [x.name for x in packages_tangorpro])
+                f.write("endif\n")
+
+            if packages_gboard:
+                f.write("\n")
+                f.write("ifeq ($(TARGET_INCLUDE_GBOARD),true)\n")
+                write_list("PRODUCT_PACKAGES", [x.name for x in packages_gboard])
                 f.write("endif\n")
 
             if target.additional_namespaces:

@@ -8,6 +8,7 @@ android_app_import {
     name: "GboardWu",
     owner: "gapps",
     apk: "proprietary/product/app/GboardWu/GboardWu.apk",
+    overrides: ["LatinIME"],
     preprocessed: true,
     presigned: true,
     dex_preopt: {
